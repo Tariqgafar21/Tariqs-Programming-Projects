@@ -17,8 +17,13 @@ import com.example.regularshowconstraintlayout.Screen2.Screen2
 import com.example.regularshowconstraintlayout.databinding.HomescreenBinding
 
 class MainActivity : AppCompatActivity() {
+
     private val binding by lazy {
         DataBindingUtil.setContentView<HomescreenBinding>(this, R.layout.homescreen)
+    }
+
+    fun nextClick() {
+        startActivity(Intent(this@MainActivity, Screen2::class.java))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,23 +31,17 @@ class MainActivity : AppCompatActivity() {
         binding.login.setOnClickListener {
             binding.email.visibility = View.VISIBLE
             binding.password.visibility = View.VISIBLE
-            binding.E2.visibility = View.VISIBLE
-            binding.P2.visibility = View.VISIBLE
+            //binding.E2.visibility = View.VISIBLE
+            //binding.P2.visibility = View.VISIBLE
         }
 
         binding.password.doAfterTextChanged {
             binding.Next.isEnabled = (it?.toString()?.length ?: 0) >= 5
 
         }
-        fun intent() {
-            startActivity(Intent(this@MainActivity, Screen2::class.java))
-        }
-        binding.Next.setOnClickListener {
-            //Toast.makeText(applicationContext, "Password is not long enough (minimum length: 5 characters", Toast.LENGTH_LONG).show()
 
-            //val intent = Intent(this,Screen2::class.java)
-            intent()
-            //startActivity(intent(this,Screen2::class.java))
+        binding.Next.setOnClickListener {
+            nextClick()
         }
 
     }

@@ -35,27 +35,22 @@ class Screen2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        var tabs = resources.getStringArray(R.array.Tabs)
-        var arrayAdapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, tabs)
 
 
-        //recycle = findViewById(R.id.Recycle)
-        binding.Recycle
 
-        recycle.layoutManager = LinearLayoutManager(this@Screen2)
-
+        binding.Recycle.layoutManager = LinearLayoutManager(this@Screen2)
+        tabNameList.add("Our Mission")
         tabNameList.add("General Body Information")
+        tabNameList.add("Convention Information")
         tabNameList.add("Fundraiser Events")
         tabNameList.add("Members of the Month")
-        tabNameList.add("Convention Informtion")
         tabNameList.add("Meet The Eboard!")
-        tabNameList.add("Mission")
-        tabNameList.add("idk")
-        tabNameList.add("idk")
-        tabNameList.add("idk")
+        tabNameList.add("Workshops")
+        tabNameList.add("Member dues/information")
+        tabNameList.add("Social media")
 
         adapter = TabAdapter(tabNameList, this@Screen2)
-        binding.Recycle.adapter
+        binding.Recycle.adapter = adapter
 
 
     }

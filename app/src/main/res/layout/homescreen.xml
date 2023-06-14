@@ -10,7 +10,7 @@
         android:id="@+id/NSBE"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?android:attr/colorBackgroundCacheHint"
+        android:background="@color/cardview_dark_background"
         tools:visibility="visible">
 
         <TextView
@@ -32,8 +32,8 @@
             android:layout_width="297dp"
             android:layout_height="270dp"
             android:layout_marginTop="28dp"
-            android:background="?android:attr/colorBackground"
-            android:backgroundTint="?android:attr/colorBackground"
+            android:background="@color/cardview_dark_background"
+            android:backgroundTint="@color/cardview_dark_background"
             android:src="@drawable/download"
             app:layout_constraintEnd_toEndOf="@+id/ToolBar"
             app:layout_constraintHorizontal_bias="0.825"
@@ -44,7 +44,7 @@
             android:id="@+id/login"
             android:layout_width="224dp"
             android:layout_height="61dp"
-            android:background="?android:attr/colorBackground"
+            android:background="@color/cardview_dark_background"
             android:fontFamily="@font/oswald"
             android:text="Sign in/ Sign up"
             android:textColor="@color/ic_launcher_background"
@@ -94,7 +94,7 @@
             android:text="Email:"
             android:textColor="@color/ic_launcher_background"
             android:textSize="20sp"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/P2"
             app:layout_constraintEnd_toEndOf="@+id/P2"
             app:layout_constraintHorizontal_bias="0.0"
@@ -109,7 +109,7 @@
             android:text="Password:"
             android:textColor="@color/ic_launcher_background"
             android:textSize="20sp"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/password"
             app:layout_constraintEnd_toStartOf="@+id/login"
             app:layout_constraintTop_toTopOf="@+id/email"
@@ -121,14 +121,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="316dp"
             android:layout_marginBottom="16dp"
-            android:background="?android:attr/colorBackground"
+            android:background="@color/cardview_dark_background"
             android:enabled="false"
             android:fontFamily="@font/oswald"
             android:text="Next"
-            android:textColor="@color/white"
+            android:textColor="@color/ic_launcher_background"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

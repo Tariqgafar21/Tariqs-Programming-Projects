@@ -18,6 +18,13 @@ class TabAdapter(var tabNameList: ArrayList<String>, var context: Context) :
         var textViewTabName: TextView = itemView.findViewById(R.id.tabName)
         var cardView: CardView = itemView.findViewById(R.id.CardView)
 
+        init {
+            //method that gets called
+            cardView.setOnClickListener {
+                Toast.makeText(itemView.context, textViewTabName.text, Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TabViewHolder {
