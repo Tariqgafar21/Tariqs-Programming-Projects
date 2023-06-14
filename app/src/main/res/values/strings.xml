@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NSBE@VCU</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_screen2">Screen2</string>
+
+    <string-array name="Tabs">
+        <item>General Body Information</item>
+        <item>Fundraiser Events</item>
+        <item>Members of the Month</item>
+        <item>Convention Information</item>
+        <item>Meet the EBoard!</item>
+        <item>Mission</item>
+    </string-array>
+</resources>
