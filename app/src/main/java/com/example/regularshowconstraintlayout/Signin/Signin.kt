@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.DataBindingUtil
 import com.example.regularshowconstraintlayout.R
-import com.example.regularshowconstraintlayout.Screen2.MainActivity
+import com.example.regularshowconstraintlayout.Screen2.Screen2Activity
 import com.example.regularshowconstraintlayout.databinding.HomescreenBinding
 
 class MainActivity : AppCompatActivity() {
@@ -19,24 +19,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun nextClick() {
-        startActivity(Intent(this@MainActivity, MainActivity::class.java))
+        startActivity(Intent(this,Screen2Activity::class.java))
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        binding.login.setOnClickListener {
-            //binding.email.visibility = View.VISIBLE
-            //binding.password.visibility = View.VISIBLE
-            //binding.E2.visibility = View.VISIBLE
-            //binding.P2.visibility = View.VISIBLE
-        }
 
-        binding.password.doAfterTextChanged {
+        /*binding.password.doAfterTextChanged {
             binding.Next.isEnabled = (it?.toString()?.length ?: 0) >= 5
 
         }
 
-        binding.Next.setOnClickListener {
+         */
+
+        binding.loginButton.setOnClickListener {
             nextClick()
         }
 
