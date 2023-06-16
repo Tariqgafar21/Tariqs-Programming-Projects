@@ -10,7 +10,7 @@
         android:id="@+id/NSBE"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/cardview_dark_background"
+        android:background="@color/ic_launcher_background"
         tools:visibility="visible">
 
         <TextView
@@ -20,40 +20,26 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/oswald"
             android:text="NSBE @VCU"
-            android:textColor="@color/ic_launcher_background"
+            android:textColor="@color/black"
             android:textSize="34sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.634"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/pic"
-            android:layout_width="297dp"
-            android:layout_height="270dp"
-            android:layout_marginTop="28dp"
-            android:background="@color/cardview_dark_background"
-            android:backgroundTint="@color/cardview_dark_background"
-            android:src="@drawable/download"
-            app:layout_constraintEnd_toEndOf="@+id/ToolBar"
-            app:layout_constraintHorizontal_bias="0.825"
-            app:layout_constraintStart_toStartOf="@+id/ToolBar"
-            app:layout_constraintTop_toBottomOf="@+id/ToolBar" />
 
         <Button
             android:id="@+id/login"
             android:layout_width="224dp"
             android:layout_height="61dp"
-            android:background="@color/cardview_dark_background"
+            android:layout_marginBottom="380dp"
+            android:background="#27AA2C"
             android:fontFamily="@font/oswald"
             android:text="Sign in/ Sign up"
             android:textColor="@color/ic_launcher_background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pic"
-            app:layout_constraintVertical_bias="0.058" />
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/email"
@@ -61,25 +47,27 @@
             android:layout_height="45dp"
             android:layout_marginTop="12dp"
             android:layout_marginEnd="96dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#27AA2C"
             android:ems="10"
             android:fontFamily="@font/oswald"
             android:inputType="textEmailAddress"
-            android:visibility="invisible"
+            android:textColor="@color/ic_launcher_background"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="221dp"
+            android:layout_width="220dp"
             android:layout_height="44dp"
             android:layout_marginTop="4dp"
-            android:background="@color/cardview_dark_background"
+            android:background="#27AA2C"
             android:ems="10"
             android:fontFamily="@font/oswald"
             android:inputType="textPassword"
+            android:textColor="@color/ic_launcher_background"
             android:textStyle="bold"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="@+id/email"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/email"
@@ -92,7 +80,7 @@
             android:layout_marginBottom="12dp"
             android:fontFamily="@font/oswald"
             android:text="Email:"
-            android:textColor="@color/ic_launcher_background"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/P2"
@@ -107,7 +95,7 @@
             android:layout_marginEnd="8dp"
             android:fontFamily="@font/oswald"
             android:text="Password:"
-            android:textColor="@color/ic_launcher_background"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/password"
@@ -128,8 +116,7 @@
             android:textColor="@color/ic_launcher_background"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

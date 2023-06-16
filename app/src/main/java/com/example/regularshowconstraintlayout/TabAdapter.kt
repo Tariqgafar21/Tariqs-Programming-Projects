@@ -10,10 +10,10 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
 
-class TabAdapter(var tabNameList: ArrayList<String>, var context: Context) :
+class TabAdapter(var tabNameList: ArrayList<String>, var context: Context, val listener: ViewHolderClickListener) :
     RecyclerView.Adapter<TabAdapter.TabViewHolder>() {
 
-    class TabViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class TabViewHolder(itemView: View, private val listener: ViewHolderClickListener) : RecyclerView.ViewHolder(itemView) {
 
         var textViewTabName: TextView = itemView.findViewById(R.id.tabName)
         var cardView: CardView = itemView.findViewById(R.id.CardView)
@@ -21,7 +21,7 @@ class TabAdapter(var tabNameList: ArrayList<String>, var context: Context) :
         init {
             //method that gets called
             cardView.setOnClickListener {
-                Toast.makeText(itemView.context, textViewTabName.text, Toast.LENGTH_SHORT).show()
+                listener.onVHClicked(textViewTabName.text.toString())
             }
         }
 
@@ -30,8 +30,7 @@ class TabAdapter(var tabNameList: ArrayList<String>, var context: Context) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TabViewHolder {
         val view: View =
             LayoutInflater.from(parent.context).inflate(R.layout.card_design, parent, false)
-
-        return TabViewHolder(view)
+        return TabViewHolder(view, listener)
     }
 
     override fun getItemCount(): Int {
@@ -44,11 +43,15 @@ class TabAdapter(var tabNameList: ArrayList<String>, var context: Context) :
 
         holder.textViewTabName.text = tabNameList.get(position)
 
+        /*
         holder.cardView.setOnClickListener {
             Toast.makeText(context, tabNameList.get(position), Toast.LENGTH_LONG)
         }
-
-
+        */
     }
 
+}
+
+interface ViewHolderClickListener {
+    fun onVHClicked(name: String)
 }

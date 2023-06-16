@@ -13,13 +13,13 @@
         android:theme="@style/Theme.RegularShowConstraintLayout"
         tools:targetApi="31">
         <activity
-            android:name=".Screen2.Screen2"
+            android:name=".Screen2.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_screen2"
             android:theme="@style/Theme.RegularShowConstraintLayout" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Signin.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.RegularShowConstraintLayout">
