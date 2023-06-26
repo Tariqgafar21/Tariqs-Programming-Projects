@@ -13,13 +13,30 @@
             android:id="@+id/Recycle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
             android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:listitem="@layout/card_design"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            android:layoutAnimation="@anim/layout_animation"/>
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="408dp"
+            android:layout_height="46dp"
+            android:background="@android:color/transparent"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search here..."
+            app:layout_constraintBottom_toTopOf="@+id/Recycle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

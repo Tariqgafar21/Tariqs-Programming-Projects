@@ -1,4 +1,4 @@
-package com.example.regularshowconstraintlayout.Convention
+package com.example.regularshowconstraintlayout.MeetTheEboard
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,11 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.addCallback
 import com.example.regularshowconstraintlayout.R
-import androidx.databinding.DataBindingUtil
-import com.example.regularshowconstraintlayout.databinding.FragmentConventionBinding
 
-
-class ConventionFragment : Fragment() {
+class Eboard : Fragment() {
 
 
     override fun onCreateView(
@@ -21,12 +18,8 @@ class ConventionFragment : Fragment() {
         val callback = requireActivity().onBackPressedDispatcher.addCallback {
             parentFragmentManager.popBackStack()
         }
-        val binding = FragmentConventionBinding.inflate(inflater,container,false)
-
-
         // Inflate the layout for this fragment
-        return binding.root
+        return inflater.inflate(R.layout.fragment_eboard, container, false)
     }
-
 
 }

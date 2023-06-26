@@ -3,24 +3,38 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/frameLayout2"
+        android:clickable="true"
+        android:id="@+id/missionLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/teal_700"
-        >
+        android:background="@color/cardview_dark_background">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="413dp"
+            android:layout_height="124dp"
+            android:src="@drawable/img_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/mission"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="My Custom Mission Fragment"
+            android:layout_width="396dp"
+            android:layout_height="552dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="116dp"
+            android:fontFamily="@font/oswald"
+            android:text="To increase the number of culturally responsible black engineers who excel academically, succeed professionally and positively impact the community."
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.0" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
