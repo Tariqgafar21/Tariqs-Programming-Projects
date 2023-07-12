@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import java.util.ArrayList
@@ -15,7 +14,7 @@ class TabAdapter(var tabNameList: ArrayList<String>, var context: Context, val l
 
     class TabViewHolder(itemView: View, private val listener: ViewHolderClickListener) : RecyclerView.ViewHolder(itemView) {
 
-        var textViewTabName: TextView = itemView.findViewById(R.id.tabName)
+        var textViewTabName: TextView = itemView.findViewById(R.id.groupName)
         var cardView: CardView = itemView.findViewById(R.id.CardView)
 
         init {

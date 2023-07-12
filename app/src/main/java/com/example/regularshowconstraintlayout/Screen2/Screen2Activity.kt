@@ -9,10 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.regularshowconstraintlayout.Convention.ConventionFragment
-import com.example.regularshowconstraintlayout.Fundraiser.FundraiserFragment
 import com.example.regularshowconstraintlayout.GBM.GBM
 import com.example.regularshowconstraintlayout.MeetTheEboard.Eboard
-import com.example.regularshowconstraintlayout.MemberDues.MemberDues
 import com.example.regularshowconstraintlayout.MemberMonth.MembersMonth
 import com.example.regularshowconstraintlayout.Mission.MissionFragment
 import com.example.regularshowconstraintlayout.R
@@ -77,17 +75,6 @@ class Screen2Activity : AppCompatActivity() {
 
             }
 
-            "Fundraiser Events" -> {
-                val transaction = supportFragmentManager.beginTransaction()
-                transaction.add(
-                    binding.fragmentContainer.id,
-                    FundraiserFragment(),
-                    FundraiserFragment::class.java.simpleName
-                )
-                transaction.addToBackStack(FundraiserFragment::class.java.simpleName)
-                transaction.commitAllowingStateLoss()
-            }
-
             "Members of the Month" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
@@ -120,18 +107,6 @@ class Screen2Activity : AppCompatActivity() {
                 transaction.addToBackStack(Workshops::class.java.simpleName)
                 transaction.commitAllowingStateLoss()
             }
-
-            "Member dues/information" -> {
-                val transaction = supportFragmentManager.beginTransaction()
-                transaction.add(
-                    binding.fragmentContainer.id,
-                    MemberDues(),
-                    MemberDues::class.java.simpleName
-                )
-                transaction.addToBackStack(MemberDues::class.java.simpleName)
-                transaction.commitAllowingStateLoss()
-            }
-
             "Social media" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(

@@ -6,20 +6,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.addCallback
-import com.example.regularshowconstraintlayout.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.regularshowconstraintlayout.databinding.FragmentEboardBinding
+import com.example.regularshowconstraintlayout.model.Category
 
 class Eboard : Fragment() {
 
 
+    private val adapter = EboardAdapterParent()
+
+    lateinit var binding: FragmentEboardBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
+        binding = FragmentEboardBinding.inflate(inflater, container, false)
         val callback = requireActivity().onBackPressedDispatcher.addCallback {
             parentFragmentManager.popBackStack()
         }
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_eboard, container, false)
-    }
+        //depending on how you want your list to show
+        binding.EboardRecycle.layoutManager = LinearLayoutManager(requireContext())
+        binding.EboardRecycle.adapter = adapter
+        adapter.setData(Category.values().toList())
 
+        return binding.root
+
+    }
 }
