@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.RegularShowConstraintLayout" parent="Theme.AppCompat.NoActionBar" />
+    <style name="Theme.RegularShowConstraintLayout" parent="Theme.AppCompat.NoActionBar"/>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Other attributes -->
+        <item name="android:textColor">@color/black</item>
+    </style>
 
 </resources>

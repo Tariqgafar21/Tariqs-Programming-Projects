@@ -1,24 +1,17 @@
 package com.example.regularshowconstraintlayout.Screen2
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.SearchView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.recyclerview.widget.RecyclerView
 import com.example.regularshowconstraintlayout.Convention.ConventionFragment
 import com.example.regularshowconstraintlayout.GBM.GBM
 import com.example.regularshowconstraintlayout.MeetTheEboard.Eboard
 import com.example.regularshowconstraintlayout.MemberMonth.MembersMonth
 import com.example.regularshowconstraintlayout.Mission.MissionFragment
 import com.example.regularshowconstraintlayout.R
-import com.example.regularshowconstraintlayout.SocialMedia.SocialMedia
 import com.example.regularshowconstraintlayout.Workshops.Workshops
 import com.example.regularshowconstraintlayout.databinding.Screen2Binding
 import com.example.regularshowconstraintlayout.optionlist.OptionListFragment
-import java.util.OptionalInt
 
 class Screen2Activity : AppCompatActivity() {
     //inflate the layout and bind it to the object
@@ -39,7 +32,6 @@ class Screen2Activity : AppCompatActivity() {
             commit()
         }
 
-
     }
 
     fun gotoNewFragment(name: String) {
@@ -52,7 +44,8 @@ class Screen2Activity : AppCompatActivity() {
                     MissionFragment::class.java.simpleName
                 )
                 transaction.addToBackStack(MissionFragment::class.java.simpleName)
-                transaction?.commitAllowingStateLoss()
+                transaction.commitAllowingStateLoss()
+
 
             }
 
@@ -61,6 +54,7 @@ class Screen2Activity : AppCompatActivity() {
                 transaction.add(binding.fragmentContainer.id, GBM(), GBM::class.java.simpleName)
                 transaction.addToBackStack(GBM::class.java.simpleName)
                 transaction.commitAllowingStateLoss()
+
             }
 
             "Convention Information" -> {
@@ -72,6 +66,7 @@ class Screen2Activity : AppCompatActivity() {
                 )
                 transaction.addToBackStack(ConventionFragment::class.java.simpleName)
                 transaction.commitAllowingStateLoss()
+
 
             }
 
@@ -95,9 +90,10 @@ class Screen2Activity : AppCompatActivity() {
                 )
                 transaction.addToBackStack(Eboard::class.java.simpleName)
                 transaction.commitAllowingStateLoss()
+
             }
 
-            "Workshops" -> {
+            "Professional Development" -> {
                 val transaction = supportFragmentManager.beginTransaction()
                 transaction.add(
                     binding.fragmentContainer.id,
@@ -106,20 +102,12 @@ class Screen2Activity : AppCompatActivity() {
                 )
                 transaction.addToBackStack(Workshops::class.java.simpleName)
                 transaction.commitAllowingStateLoss()
-            }
-            "Social media" -> {
-                val transaction = supportFragmentManager.beginTransaction()
-                transaction.add(
-                    binding.fragmentContainer.id,
-                    SocialMedia(),
-                    SocialMedia::class.java.simpleName
-                )
-                transaction.addToBackStack(SocialMedia::class.java.simpleName)
-                transaction.commitAllowingStateLoss()
+
             }
 
         }
     }
+
 }
 
 

@@ -13,11 +13,40 @@ enum class Category(val group: String, val detail: CategoryDetail) {
             "as an android engineer"))))
     ,ProgramsChair("Programs Chair", CategoryDetail(listOf
         (MemberDetail("idk","idk")))),
+    Senator("Senator", CategoryDetail(listOf
+        (MemberDetail("idk","idk")))),
+    Historian("Historian", CategoryDetail(listOf
+        (MemberDetail("idk","idk")))),
+    TorchChair("Torch Chair", CategoryDetail(listOf
+        (MemberDetail("idk","idk")))),
+    telecommunicatons("Telecommunications", CategoryDetail(listOf
+        (MemberDetail("idk","idk")))),
+    proffesionalDeveloment("Professional Development", CategoryDetail(listOf(
+        MemberDetail("CJ", "idk")))),
+    AcademicExcellence("Academic Excellence Chair", CategoryDetail(listOf(
+        MemberDetail("Vanessa", "idk")))),
+    MembershipChair(" Membership Chair", CategoryDetail(listOf(
+        MemberDetail("Lauren", "idk")))),
+    ConventioPlanning("Convention Planning", CategoryDetail(listOf(
+        MemberDetail("Noah Mccain", "idk")))),
 
 
 
 
 
+    /*
+    {
+        "group": "President",
+        "detail": {
+            "members": [
+                {
+                    "quote": "Name",
+                    "name": "Mike Lindsay"
+                }
+            ]
+        }
 
+    }
+     */
 
 }

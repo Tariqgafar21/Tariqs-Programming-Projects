@@ -1,14 +1,13 @@
 package com.example.regularshowconstraintlayout.MeetTheEboard
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.addCallback
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.regularshowconstraintlayout.databinding.FragmentEboardBinding
 import com.example.regularshowconstraintlayout.model.Category
 
@@ -30,9 +29,33 @@ class Eboard : Fragment() {
         //depending on how you want your list to show
         binding.EboardRecycle.layoutManager = LinearLayoutManager(requireContext())
         binding.EboardRecycle.adapter = adapter
-        adapter.setData(Category.values().toList())
+        val items = Category.values().toList().map {
+            EboardAdapterParent.NewDataItem(
+                it.group,
+                it.detail.members
+            )
+        }
+        adapter.setFullData(items)
+        binding.search.setOnQueryTextListener(object:
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                TODO("Not yet implemented")
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                Log.e("test",newText.toString())
+                adapter.filterQuery(newText.orEmpty())
+                return true
+            }
+
+
+        })
+
+
+
 
         return binding.root
+
 
     }
 }

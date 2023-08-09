@@ -1,19 +1,13 @@
 package com.example.regularshowconstraintlayout.MeetTheEboard
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.regularshowconstraintlayout.R
 import com.example.regularshowconstraintlayout.databinding.ChildExpandableEboardBinding
-import com.example.regularshowconstraintlayout.model.Category
-import com.example.regularshowconstraintlayout.model.CategoryDetail
 import com.example.regularshowconstraintlayout.model.MemberDetail
 
 
-class EboardApaterChild() : RecyclerView.Adapter<EboardApaterChild.DataViewHolder>(){
+class EboardApaterChild : RecyclerView.Adapter<EboardApaterChild.DataViewHolder>(){
 
     val members = mutableListOf<MemberDetail>()
 

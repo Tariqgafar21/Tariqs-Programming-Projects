@@ -7,11 +7,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/Screen2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:drawableRight="@drawable/baseline_home_24"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="129dp">
+        </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

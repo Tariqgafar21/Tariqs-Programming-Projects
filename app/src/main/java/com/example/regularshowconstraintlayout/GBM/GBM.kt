@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.example.regularshowconstraintlayout.R
 
 
-class GBM() : Fragment() {
+class GBM : Fragment() {
 
 
     override fun onCreateView(

@@ -3,41 +3,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
         android:id="@+id/Screen2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/Recycle"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="0dp"
+            android:layoutAnimation="@anim/layout_animation"
             android:visibility="visible"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:listitem="@layout/card_design"
-            android:layoutAnimation="@anim/layout_animation"/>
+            tools:layout_editor_absoluteY="0dp"
+            tools:listitem="@layout/card_design_grid"/>
+</RelativeLayout>
 
-        <SearchView
-            android:id="@+id/search"
-            android:layout_width="408dp"
-            android:layout_height="46dp"
-            android:background="@android:color/transparent"
-            android:iconifiedByDefault="false"
-            android:queryHint="Search here..."
-            app:layout_constraintBottom_toTopOf="@+id/Recycle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:visibility="gone"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
 

@@ -11,7 +11,7 @@ import com.example.regularshowconstraintlayout.R
 import com.example.regularshowconstraintlayout.databinding.FragmentMissionBinding
 
 
-class MissionFragment() : Fragment() {
+class MissionFragment : Fragment() {
 
 
     //I normally hate lateinit, but it's okay for this

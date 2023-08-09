@@ -7,9 +7,9 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="281dp"
-        android:layout_height="451dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="224dp"
+        android:layout_marginTop="150dp"
         android:src="@drawable/img_4" />
 
     <TextView
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/logo"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="33dp"
         android:fontFamily="@font/oswald"
         android:text="NSBE@VCU"
         android:textAlignment="center"

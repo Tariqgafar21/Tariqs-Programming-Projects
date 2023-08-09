@@ -14,8 +14,8 @@ class TabAdapter(var tabNameList: ArrayList<String>, var context: Context, val l
 
     class TabViewHolder(itemView: View, private val listener: ViewHolderClickListener) : RecyclerView.ViewHolder(itemView) {
 
-        var textViewTabName: TextView = itemView.findViewById(R.id.groupName)
-        var cardView: CardView = itemView.findViewById(R.id.CardView)
+        var textViewTabName: TextView = itemView.findViewById(R.id.gridText)
+        var cardView: CardView = itemView.findViewById(R.id.grid_card)
 
         init {
             //method that gets called
@@ -28,7 +28,7 @@ class TabAdapter(var tabNameList: ArrayList<String>, var context: Context, val l
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TabViewHolder {
         val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.card_design, parent, false)
+            LayoutInflater.from(parent.context).inflate(R.layout.card_design_grid, parent, false)
         return TabViewHolder(view, listener)
     }
 

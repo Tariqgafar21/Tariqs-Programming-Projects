@@ -17,7 +17,7 @@ class ConventionFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val callback = requireActivity().onBackPressedDispatcher.addCallback {
             parentFragmentManager.popBackStack()
         }
