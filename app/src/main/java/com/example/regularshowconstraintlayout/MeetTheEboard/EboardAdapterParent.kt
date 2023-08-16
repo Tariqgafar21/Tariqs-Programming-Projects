@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.regularshowconstraintlayout.databinding.CardDesign2Binding
 import com.example.regularshowconstraintlayout.model.MemberDetail
+import retrofit2.http.Body
 import java.util.Locale
 
 
@@ -105,7 +106,7 @@ fun filterQuery(searchText: String) {
     }
     setData(newList)
 }
-    data class NewDataItem(val title: String,val members: List<MemberDetail>)
+    data class NewDataItem(val title: String,val members: List<MemberDetail>,val body: String="")
         
     
 }

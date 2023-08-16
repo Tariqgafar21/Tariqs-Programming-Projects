@@ -1,3 +1,0 @@
-package com.example.regularshowconstraintlayout.GBM
-
-class GBMAdapterChild

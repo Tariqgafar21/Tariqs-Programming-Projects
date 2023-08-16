@@ -15,7 +15,29 @@
                 android:layout_width="match_parent"
                 android:id="@+id/gbmrecycle"
                 android:layout_height="match_parent"
-                android:layout_marginTop="150dp"/>
+                android:layout_marginTop="50dp"
+                android:layoutAnimation="@anim/layout_animation"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchGBM"
+            android:layout_width="405dp"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/search_view_bg"
+            android:theme="@style/AppTheme"
+            app:iconifiedByDefault="false"
+            app:layout_constraintBottom_toTopOf="@+id/gbmrecycle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth="match_parent"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search here..."
+            app:searchIcon="@drawable/baseline_search_24" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
